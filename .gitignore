@@ -1,8 +1,11 @@
 HELP.md
 target/
+out/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
 ### STS ###
 .apt_generated
@@ -31,3 +34,26 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Java ###
+*.class
+
+### Logs ###
+*.log
+
+### Dependency directories ###
+/.mvn/
+/.gradle/
+/build/
+
+### OS generated files ###
+.DS_Store
+Thumbs.db
+
+### JWT Secrets ###
+*.env
+*.properties
+
+
+### Jar Files ###
+*.jar

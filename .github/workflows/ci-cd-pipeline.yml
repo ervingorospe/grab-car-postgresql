@@ -1,0 +1,27 @@
+name: CI/CD Pipeline - PostgreSQL Migration
+
+on:
+  push:
+    paths:
+      - '**'
+    branches:
+      - main
+
+env:
+  SOURCE_PATH: 'src/main/resources/db/changelog/db.changelog-master.xml'
+
+jobs:
+  liquibase-migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 23
+        uses: actions/setup-java@v4
+        with:
+          java-version: '23'
+          distribution: 'temurin'
+
+      - name: Run Liquibase Migrations
+        run: mvn liquibase:update -Dliquibase.url=${{ secrets.DB_URL }} -Dliquibase.username=${{ secrets.DB_USER }} -Dliquibase.password=${{ secrets.DB_PASS }} -Dliquibase.changeLogFile=${{ env.SOURCE_PATH }}
