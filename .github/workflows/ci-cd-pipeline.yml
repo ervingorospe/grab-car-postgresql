@@ -24,4 +24,4 @@ jobs:
           distribution: 'temurin'
 
       - name: Run Liquibase Migrations
-        run: mvn liquibase:update -Dliquibase.url=${{ secrets.DB_URL }} -Dliquibase.username=${{ secrets.DB_USER }} -Dliquibase.password=${{ secrets.DB_PASS }} -Dliquibase.changeLogFile=${{ env.SOURCE_PATH }}
+        run: mvn liquibase:update -Dliquibase.url=${{ secrets.DB_URL }} -Dliquibase.username=${{ secrets.DB_USER }} -Dliquibase.password=${{ secrets.DB_PASSWORD }} -Dliquibase.changeLogFile=${{ env.SOURCE_PATH }}
