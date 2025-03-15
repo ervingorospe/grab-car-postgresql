@@ -32,7 +32,10 @@ spec:
                 secretKeyRef:
                   name: db-secrets
                   key: DB_PASSWORD
-          volumeMounts:
-            - name: changelog-volume
-              mountPath: /app/resources/db/changelog  # Mounting changelogs
+#          volumeMounts:
+#            - name: changelog-volume
+#              mountPath: /app/resources/db/changelog
+#      volumes:
+#        - name: changelog-volume
+#          emptyDir: {}
       restartPolicy: Never
