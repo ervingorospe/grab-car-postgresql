@@ -10,7 +10,7 @@ spec:
         - name: grabcar-postgre-sql
           image: ervincode/grabcar-postgre-sql:${IMAGE_TAG} # Uses the same image with Liquibase inside
           imagePullPolicy: Always
-          command: ["mvn", "liquibase:update"]  # Runs migrations
+          command: ["liquibase", "update"]  # Runs migrations
           env:
             - name: ENV
               valueFrom:
@@ -32,6 +32,8 @@ spec:
                 secretKeyRef:
                   name: db-secrets
                   key: DB_PASSWORD
+            - name: LIQUIBASE_CHANGELOG_FILE
+              value: "classpath:/db/changelog/db.changelog-master.xml"
 #          volumeMounts:
 #            - name: changelog-volume
 #              mountPath: /app/resources/db/changelog
