@@ -111,4 +111,5 @@ jobs:
       - name: Deploy to GKE
         run: |
           kubectl get namespace $GKE_NAMESPACE || kubectl create namespace $GKE_NAMESPACE
+          kubectl delete job grabcar-postgre-sql -n grab-car
           kubectl apply -f k8s/liquibase-job.yml -n $GKE_NAMESPACE
