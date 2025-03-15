@@ -39,10 +39,4 @@ spec:
                   key: DB_DRIVER
             - name: LIQUIBASE_CHANGELOG_FILE
               value: "classpath:/db/changelog/db.changelog-master.xml"
-#          volumeMounts:
-#            - name: changelog-volume
-#              mountPath: /app/resources/db/changelog
-#      volumes:
-#        - name: changelog-volume
-#          emptyDir: {}
       restartPolicy: Never

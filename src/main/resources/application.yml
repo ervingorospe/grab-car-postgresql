@@ -15,6 +15,8 @@ spring:
     show-sql: true
   liquibase:
     change-log: classpath:/db/changelog/db.changelog-master.xml
+  main:
+    web-application-type: none
 
 server:
   port: 3000
