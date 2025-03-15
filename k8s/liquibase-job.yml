@@ -32,6 +32,11 @@ spec:
                 secretKeyRef:
                   name: db-secrets
                   key: DB_PASSWORD
+            - name: DB_DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: DB_DRIVER
             - name: LIQUIBASE_CHANGELOG_FILE
               value: "classpath:/db/changelog/db.changelog-master.xml"
 #          volumeMounts:
