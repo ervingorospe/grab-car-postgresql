@@ -81,6 +81,9 @@ jobs:
         #      For debuggin
       - name: Debug GitHub Context
         run: echo '${{ toJson(github) }}'
+        #      For debuggin
+      - name: Debug Credentials File
+        run: cat /home/runner/work/grab-car-postgresql/grab-car-postgresql/gha-creds-*.json
 
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
