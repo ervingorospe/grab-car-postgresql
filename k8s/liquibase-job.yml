@@ -10,7 +10,7 @@ spec:
         - name: grabcar-postgre-sql
           image: ervincode/grabcar-postgre-sql:${IMAGE_TAG} # Uses the same image with Liquibase inside
           imagePullPolicy: Always
-          command: ["liquibase", "update"]  # Runs migrations
+          command: ["java", "-jar", "app.jar"]  # Runs migrations
           env:
             - name: ENV
               valueFrom:
