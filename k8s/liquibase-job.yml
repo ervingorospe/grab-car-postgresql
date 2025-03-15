@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        - name: grabcar-auth-service
+        - name: grabcar-postgre-sql
           image: ervincode/grabcar-postgre-sql:${IMAGE_TAG} # Uses the same image with Liquibase inside
           imagePullPolicy: Always
           command: ["mvn", "liquibase:update"]  # Runs migrations
