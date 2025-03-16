@@ -12,7 +12,12 @@
             <column name="user_id" type="UUID">
                 <constraints nullable="false"/>
             </column>
-            <column name="address" type="TEXT"/>
+            <column name="label" type="VARCHAR(255)"/>
+            <column name="street" type="VARCHAR(255)"/>
+            <column name="city" type="VARCHAR(255)"/>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="postal_code" type="VARCHAR(255)"/>
+            <column name="country" type="VARCHAR(255)"/>
             <column name="latitude" type="DOUBLE PRECISION">
                 <constraints nullable="false"/>
             </column>
