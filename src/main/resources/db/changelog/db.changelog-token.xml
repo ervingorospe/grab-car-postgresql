@@ -29,7 +29,7 @@
 
     <!-- Add Foreign Key Constraint -->
     <changeSet id="3" author="ervin">
-        <addForeignKeyConstraint baseTableName="token"
+        <addForeignKeyConstraint baseTableName="tokens"
                                  baseColumnNames="user_id"
                                  referencedTableName="users"
                                  referencedColumnNames="id"
