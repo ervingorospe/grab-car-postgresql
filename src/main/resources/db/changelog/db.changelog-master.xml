@@ -8,5 +8,6 @@
     <include file="db/changelog/db.changelog-users_v1.xml"/>
     <include file="db/changelog/db.changelog-user_details_v1.xml"/>
     <include file="db/changelog/db.changelog-user_address.xml"/>
+    <include file="db/changelog/db.changelog-token.xml"/>
 <!--    <include file="db/changelog/db.changelog-users_v2.xml"/> just an example adding column to users table-->
 </databaseChangeLog>
